@@ -1,0 +1,16 @@
+{
+  "name": "alquiler-autos-screenplay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "mocha \"tests/**/*.test.js\" --timeout 90000",
+    "test:html": "mocha \"tests/**/*.test.js\" --timeout 90000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=screenplay-report"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chromedriver": "^141.0.6",
+    "mocha": "^11.7.4",
+    "selenium-webdriver": "^4.25.0",
+    "mochawesome": "^7.1.4"
+  }
+}

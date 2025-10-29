@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 12,
-    "tests": 18,
-    "passes": 14,
+    "suites": 15,
+    "tests": 23,
+    "passes": 19,
     "pending": 0,
     "failures": 4,
-    "start": "2025-10-29T20:16:42.240Z",
-    "end": "2025-10-29T20:18:46.713Z",
-    "duration": 124473,
-    "testsRegistered": 18,
-    "passPercent": 77.77777777777779,
+    "start": "2025-10-29T23:21:46.918Z",
+    "end": "2025-10-29T23:23:30.817Z",
+    "duration": 103899,
+    "testsRegistered": 23,
+    "passPercent": 82.6086956521739,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "31737dfb-bffb-4f75-8480-d2910b4ac3dc",
+      "uuid": "14a57740-2b1b-4e55-9fe5-c5d61b526252",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b7149a56-8067-4fe2-863f-a1a36c039c91",
+          "uuid": "dfaf0cbe-63e9-4347-888d-2a43e4641aea",
           "title": "E2E: Autenticación",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\01_auth.test.js",
           "file": "\\e2e\\tests\\01_auth.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"E2E: Autenticación\"",
               "fullTitle": "E2E: Autenticación \"before all\" hook in \"E2E: Autenticación\"",
               "timedOut": false,
-              "duration": 1852,
+              "duration": 2103,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "f9922d0b-9c32-4b1b-866b-0611206e2b85",
-              "parentUUID": "b7149a56-8067-4fe2-863f-a1a36c039c91",
+              "uuid": "687c7b9f-210e-4ec4-983f-a22a223b27ac",
+              "parentUUID": "dfaf0cbe-63e9-4347-888d-2a43e4641aea",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after all\" hook in \"E2E: Autenticación\"",
               "fullTitle": "E2E: Autenticación \"after all\" hook in \"E2E: Autenticación\"",
               "timedOut": false,
-              "duration": 147,
+              "duration": 76,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "if (driver) {\n  await driver.quit();\n}",
               "err": {},
-              "uuid": "fb4db6f1-45fb-4e7b-9331-4151381390ea",
-              "parentUUID": "b7149a56-8067-4fe2-863f-a1a36c039c91",
+              "uuid": "2898a4d0-61ec-4558-b9d2-ee7fbfb3bea8",
+              "parentUUID": "dfaf0cbe-63e9-4347-888d-2a43e4641aea",
               "isHook": true,
               "skipped": false
             }
@@ -76,7 +76,7 @@
               "title": "Registra usuario si no existe y luego inicia sesión",
               "fullTitle": "E2E: Autenticación Registra usuario si no existe y luego inicia sesión",
               "timedOut": false,
-              "duration": 15720,
+              "duration": 17198,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -85,12 +85,12 @@
               "context": null,
               "code": "// Intentar registro\nawait driver.get(`${BASE}/signup`);\nawait typeById(driver, 'username', user.username);\nawait typeById(driver, 'email', user.email);\nawait typeById(driver, 'password', user.password);\nawait typeById(driver, 'confirmPassword', user.password);\n// enviar formulario\nawait clickByCss(driver, 'form button');\n// navegar a signin directamente (registro puede existir ya)\nawait driver.get(`${BASE}/signin`);\nawait typeById(driver, 'email', user.email);\nawait typeById(driver, 'password', user.password);\nawait clickByCss(driver, 'form button');\n// esperar navegación al home\nawait waitForUrl(driver, '/');\n// assert: aparece sección de reserva\nconst h2Text = await getText(driver, 'section#booking-section h2');\nexpect(h2Text.toLowerCase()).to.include('reservar');\nawait screenshot(driver, './e2e/.artifacts/auth.png');",
               "err": {
-                "message": "TimeoutError: Waiting for element to be located By(css selector, section#booking-section h2)\nWait timed out after 10043ms",
-                "estack": "TimeoutError: Waiting for element to be located By(css selector, section#booking-section h2)\nWait timed out after 10043ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "message": "TimeoutError: Waiting for element to be located By(css selector, section#booking-section h2)\nWait timed out after 10089ms",
+                "estack": "TimeoutError: Waiting for element to be located By(css selector, section#booking-section h2)\nWait timed out after 10089ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "641d52e5-cd80-462e-855d-b31c4fdfcdbe",
-              "parentUUID": "b7149a56-8067-4fe2-863f-a1a36c039c91",
+              "uuid": "8e8764b2-f6d5-4683-9fcc-350ff0ef021e",
+              "parentUUID": "dfaf0cbe-63e9-4347-888d-2a43e4641aea",
               "isHook": false,
               "skipped": false
             }
@@ -98,17 +98,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "641d52e5-cd80-462e-855d-b31c4fdfcdbe"
+            "8e8764b2-f6d5-4683-9fcc-350ff0ef021e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 15720,
+          "duration": 17198,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "7aa570f0-2001-4acf-8977-ce97ff3994ff",
+          "uuid": "55bae52b-7b2d-4cb9-877f-19f7add14e44",
           "title": "E2E: Buscar vehículo",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\02_search.test.js",
           "file": "\\e2e\\tests\\02_search.test.js",
@@ -117,7 +117,7 @@
               "title": "\"before all\" hook in \"E2E: Buscar vehículo\"",
               "fullTitle": "E2E: Buscar vehículo \"before all\" hook in \"E2E: Buscar vehículo\"",
               "timedOut": false,
-              "duration": 1085,
+              "duration": 797,
               "state": null,
               "speed": null,
               "pass": false,
@@ -126,8 +126,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "913bdd82-d17f-425e-b8ad-63f7356826bd",
-              "parentUUID": "7aa570f0-2001-4acf-8977-ce97ff3994ff",
+              "uuid": "f78d901a-a03e-4aed-add5-6448e83cf65b",
+              "parentUUID": "55bae52b-7b2d-4cb9-877f-19f7add14e44",
               "isHook": true,
               "skipped": false
             }
@@ -137,7 +137,7 @@
               "title": "\"after all\" hook in \"E2E: Buscar vehículo\"",
               "fullTitle": "E2E: Buscar vehículo \"after all\" hook in \"E2E: Buscar vehículo\"",
               "timedOut": false,
-              "duration": 131,
+              "duration": 45,
               "state": null,
               "speed": null,
               "pass": false,
@@ -146,8 +146,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "5f743a7e-288c-441c-8357-5ea8b371a752",
-              "parentUUID": "7aa570f0-2001-4acf-8977-ce97ff3994ff",
+              "uuid": "712952e4-f064-4405-b6f4-ce30f6fa46c6",
+              "parentUUID": "55bae52b-7b2d-4cb9-877f-19f7add14e44",
               "isHook": true,
               "skipped": false
             }
@@ -157,7 +157,7 @@
               "title": "Completa campos y envía búsqueda",
               "fullTitle": "E2E: Buscar vehículo Completa campos y envía búsqueda",
               "timedOut": false,
-              "duration": 22577,
+              "duration": 14432,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -166,12 +166,12 @@
               "context": null,
               "code": "await driver.get(`${BASE}/`);\n// Rellenar campos de texto\nawait typeById(driver, 'pickup_district', 'Madrid');\nawait typeById(driver, 'pickup_location', 'Centro : Puerta del Sol');\nawait typeById(driver, 'dropoff_location', 'Retiro : Parque del Retiro');\n// Intentar escribir en los DateTimePickers por placeholder\nconst pickupInput = await driver.findElement(By.css('input[placeholder=\"Hora de recogida\"]'));\nawait pickupInput.clear();\nawait pickupInput.sendKeys('2025-01-01 10:00');\nconst dropInput = await driver.findElement(By.css('input[placeholder=\"Hora de devolución\"]'));\nawait dropInput.clear();\nawait dropInput.sendKeys('2025-01-02 10:00');\n// Enviar búsqueda\nawait clickByCss(driver, 'button.book-content__box_button');\n// La app navega a /availableVehicles tras búsqueda válida\nawait waitForUrl(driver, '/availableVehicles');\n// Verificar que la página de resultados cargó (encabezado o tarjetas)\nconst heading = await getText(driver, 'h1, h2, h3');\nexpect(heading).to.be.a('string');\nawait screenshot(driver, './e2e/.artifacts/search.png');",
               "err": {
-                "message": "TimeoutError: Waiting for element to be located By(css selector, *[id=\"pickup_district\"])\nWait timed out after 10107ms",
-                "estack": "TimeoutError: Waiting for element to be located By(css selector, *[id=\"pickup_district\"])\nWait timed out after 10107ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "message": "TimeoutError: Waiting for element to be located By(css selector, *[id=\"pickup_district\"])\nWait timed out after 10046ms",
+                "estack": "TimeoutError: Waiting for element to be located By(css selector, *[id=\"pickup_district\"])\nWait timed out after 10046ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "26ab5e77-b598-4d42-ad24-ab3d2195b61d",
-              "parentUUID": "7aa570f0-2001-4acf-8977-ce97ff3994ff",
+              "uuid": "9ea65eed-8741-4ad5-9f29-be53f7de354e",
+              "parentUUID": "55bae52b-7b2d-4cb9-877f-19f7add14e44",
               "isHook": false,
               "skipped": false
             }
@@ -179,17 +179,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "26ab5e77-b598-4d42-ad24-ab3d2195b61d"
+            "9ea65eed-8741-4ad5-9f29-be53f7de354e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 22577,
+          "duration": 14432,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "621e7928-9c7c-4bf9-9521-1a3dcdc67306",
+          "uuid": "15c7f05d-04d0-429f-a736-76391a0e6cad",
           "title": "E2E: Reservar vehículo",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\03_reservation.test.js",
           "file": "\\e2e\\tests\\03_reservation.test.js",
@@ -198,7 +198,7 @@
               "title": "\"before all\" hook in \"E2E: Reservar vehículo\"",
               "fullTitle": "E2E: Reservar vehículo \"before all\" hook in \"E2E: Reservar vehículo\"",
               "timedOut": false,
-              "duration": 822,
+              "duration": 601,
               "state": null,
               "speed": null,
               "pass": false,
@@ -207,8 +207,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "6d1f4585-7fc2-4f12-a73c-86e33fc00d3e",
-              "parentUUID": "621e7928-9c7c-4bf9-9521-1a3dcdc67306",
+              "uuid": "c7fdf82b-bafc-4a38-a02c-41f3c830ea4c",
+              "parentUUID": "15c7f05d-04d0-429f-a736-76391a0e6cad",
               "isHook": true,
               "skipped": false
             }
@@ -218,7 +218,7 @@
               "title": "\"after all\" hook in \"E2E: Reservar vehículo\"",
               "fullTitle": "E2E: Reservar vehículo \"after all\" hook in \"E2E: Reservar vehículo\"",
               "timedOut": false,
-              "duration": 142,
+              "duration": 76,
               "state": null,
               "speed": null,
               "pass": false,
@@ -227,8 +227,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "ffb7b363-a284-4c62-ac14-8da981b96c60",
-              "parentUUID": "621e7928-9c7c-4bf9-9521-1a3dcdc67306",
+              "uuid": "0d0c1658-e885-4b42-bcb0-3b7369d8ebad",
+              "parentUUID": "15c7f05d-04d0-429f-a736-76391a0e6cad",
               "isHook": true,
               "skipped": false
             }
@@ -238,7 +238,7 @@
               "title": "Navega a vehículos, elige uno y llega a Checkout",
               "fullTitle": "E2E: Reservar vehículo Navega a vehículos, elige uno y llega a Checkout",
               "timedOut": false,
-              "duration": 18345,
+              "duration": 16684,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -247,12 +247,12 @@
               "context": null,
               "code": "await driver.get(`${BASE}/vehicles`);\n// Esperar que aparezca el botón \"Reservar Auto\" y hacer click\nawait clickByCss(driver, 'button'); // primer botón en la tarjeta\n// muchas tarjetas tienen dos botones; asegurarnos de llegar a checkout\nawait waitForUrl(driver, '/checkoutPage');\nconst title = await getText(driver, 'h1');\nexpect(title).to.include('Resumen del Pedido');\nawait screenshot(driver, './e2e/.artifacts/checkout.png');",
               "err": {
-                "message": "TimeoutError: Wait timed out after 15080ms",
-                "estack": "TimeoutError: Wait timed out after 15080ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "message": "TimeoutError: Wait timed out after 15006ms",
+                "estack": "TimeoutError: Wait timed out after 15006ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "2260f2cb-faf1-47d3-9453-c458c8d3ef82",
-              "parentUUID": "621e7928-9c7c-4bf9-9521-1a3dcdc67306",
+              "uuid": "9514f461-ab88-4439-a9a8-7f57041fb140",
+              "parentUUID": "15c7f05d-04d0-429f-a736-76391a0e6cad",
               "isHook": false,
               "skipped": false
             }
@@ -260,17 +260,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "2260f2cb-faf1-47d3-9453-c458c8d3ef82"
+            "9514f461-ab88-4439-a9a8-7f57041fb140"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 18345,
+          "duration": 16684,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "1a07c23d-3bb4-4e7f-8cef-4c2885f6273c",
+          "uuid": "e0997589-d6f5-4788-bf93-fcf7f07e889b",
           "title": "E2E: Home navegación básica",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\04_home_navigation.test.js",
           "file": "\\e2e\\tests\\04_home_navigation.test.js",
@@ -279,7 +279,7 @@
               "title": "\"before all\" hook in \"E2E: Home navegación básica\"",
               "fullTitle": "E2E: Home navegación básica \"before all\" hook in \"E2E: Home navegación básica\"",
               "timedOut": false,
-              "duration": 800,
+              "duration": 723,
               "state": null,
               "speed": null,
               "pass": false,
@@ -288,8 +288,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "825cefc8-0baf-4c6b-bb2a-db1ae1443b0d",
-              "parentUUID": "1a07c23d-3bb4-4e7f-8cef-4c2885f6273c",
+              "uuid": "00594656-7f3c-4d10-a4ab-ec1409db961a",
+              "parentUUID": "e0997589-d6f5-4788-bf93-fcf7f07e889b",
               "isHook": true,
               "skipped": false
             }
@@ -299,7 +299,7 @@
               "title": "\"after all\" hook in \"E2E: Home navegación básica\"",
               "fullTitle": "E2E: Home navegación básica \"after all\" hook in \"E2E: Home navegación básica\"",
               "timedOut": false,
-              "duration": 138,
+              "duration": 78,
               "state": null,
               "speed": null,
               "pass": false,
@@ -308,8 +308,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "1acb0f1b-1140-4db7-9c24-f2db94300081",
-              "parentUUID": "1a07c23d-3bb4-4e7f-8cef-4c2885f6273c",
+              "uuid": "8bacc5fb-e931-47aa-a854-1fb3aebe297f",
+              "parentUUID": "e0997589-d6f5-4788-bf93-fcf7f07e889b",
               "isHook": true,
               "skipped": false
             }
@@ -319,7 +319,7 @@
               "title": "Carga Home y navega a /vehicles",
               "fullTitle": "E2E: Home navegación básica Carga Home y navega a /vehicles",
               "timedOut": false,
-              "duration": 19871,
+              "duration": 19079,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -328,12 +328,12 @@
               "context": null,
               "code": "await driver.get(`${BASE}/`);\n// Botón \"Ver Vehículos Disponibles\" navega a /vehicles\nawait clickByCss(driver, 'button');\nawait waitForUrl(driver, '/vehicles');\nconst anyHeading = await getText(driver, 'h1, h2, h3');\nexpect(anyHeading).to.be.a('string');\nawait screenshot(driver, './e2e/.artifacts/home_nav.png');",
               "err": {
-                "message": "TimeoutError: Wait timed out after 15078ms",
-                "estack": "TimeoutError: Wait timed out after 15078ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "message": "TimeoutError: Wait timed out after 15207ms",
+                "estack": "TimeoutError: Wait timed out after 15207ms\n    at C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "24ecf8ab-5c71-4e77-be3c-a152bdef1396",
-              "parentUUID": "1a07c23d-3bb4-4e7f-8cef-4c2885f6273c",
+              "uuid": "b2f4cdce-dabc-4c3c-98cc-bf1961cdb746",
+              "parentUUID": "e0997589-d6f5-4788-bf93-fcf7f07e889b",
               "isHook": false,
               "skipped": false
             }
@@ -341,17 +341,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "24ecf8ab-5c71-4e77-be3c-a152bdef1396"
+            "b2f4cdce-dabc-4c3c-98cc-bf1961cdb746"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 19871,
+          "duration": 19079,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "4a93b33b-14c5-4118-8a80-c902bd30501e",
+          "uuid": "48373672-5fa9-4d84-97a9-6720c1243d9f",
           "title": "E2E: SignIn - elementos y navegación",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\05_signin_page.test.js",
           "file": "\\e2e\\tests\\05_signin_page.test.js",
@@ -360,7 +360,7 @@
               "title": "\"before all\" hook in \"E2E: SignIn - elementos y navegación\"",
               "fullTitle": "E2E: SignIn - elementos y navegación \"before all\" hook in \"E2E: SignIn - elementos y navegación\"",
               "timedOut": false,
-              "duration": 807,
+              "duration": 641,
               "state": null,
               "speed": null,
               "pass": false,
@@ -369,8 +369,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "4ced97b9-fb13-423a-ae33-e2f538fe6b1f",
-              "parentUUID": "4a93b33b-14c5-4118-8a80-c902bd30501e",
+              "uuid": "b2886dd9-e8f5-47ce-8ac3-42e25125cc75",
+              "parentUUID": "48373672-5fa9-4d84-97a9-6720c1243d9f",
               "isHook": true,
               "skipped": false
             }
@@ -380,7 +380,7 @@
               "title": "\"after all\" hook in \"E2E: SignIn - elementos y navegación\"",
               "fullTitle": "E2E: SignIn - elementos y navegación \"after all\" hook in \"E2E: SignIn - elementos y navegación\"",
               "timedOut": false,
-              "duration": 137,
+              "duration": 68,
               "state": null,
               "speed": null,
               "pass": false,
@@ -389,8 +389,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "0d80d976-f299-4383-a7c5-3e2f0e8b0a6d",
-              "parentUUID": "4a93b33b-14c5-4118-8a80-c902bd30501e",
+              "uuid": "3413b20c-54d7-4f95-93ea-d83f331b16ea",
+              "parentUUID": "48373672-5fa9-4d84-97a9-6720c1243d9f",
               "isHook": true,
               "skipped": false
             }
@@ -400,7 +400,7 @@
               "title": "Carga /signin y muestra inputs email y password",
               "fullTitle": "E2E: SignIn - elementos y navegación Carga /signin y muestra inputs email y password",
               "timedOut": false,
-              "duration": 3206,
+              "duration": 1995,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -409,8 +409,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/signin`);\nconst email = await waitForVisible(driver, By.id('email'));\nconst password = await waitForVisible(driver, By.id('password'));\nexpect(await email.isDisplayed()).to.equal(true);\nexpect(await password.isDisplayed()).to.equal(true);",
               "err": {},
-              "uuid": "08096f32-27b6-454c-ab1f-0710a8e85af2",
-              "parentUUID": "4a93b33b-14c5-4118-8a80-c902bd30501e",
+              "uuid": "4d50bf5d-32a4-493c-8ec4-00527c17a975",
+              "parentUUID": "48373672-5fa9-4d84-97a9-6720c1243d9f",
               "isHook": false,
               "skipped": false
             },
@@ -418,36 +418,36 @@
               "title": "Tiene link para ir a /signup",
               "fullTitle": "E2E: SignIn - elementos y navegación Tiene link para ir a /signup",
               "timedOut": false,
-              "duration": 67,
+              "duration": 20,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "const signupLink = await waitForVisible(driver, By.linkText('Registrarse'));\nexpect(await signupLink.isDisplayed()).to.equal(true);",
               "err": {},
-              "uuid": "adca6b8d-48ff-4f5d-86c4-41d018b1b3ba",
-              "parentUUID": "4a93b33b-14c5-4118-8a80-c902bd30501e",
+              "uuid": "f6894578-1c30-4ead-81f2-c56d08701ff0",
+              "parentUUID": "48373672-5fa9-4d84-97a9-6720c1243d9f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "08096f32-27b6-454c-ab1f-0710a8e85af2",
-            "adca6b8d-48ff-4f5d-86c4-41d018b1b3ba"
+            "4d50bf5d-32a4-493c-8ec4-00527c17a975",
+            "f6894578-1c30-4ead-81f2-c56d08701ff0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3273,
+          "duration": 2015,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "fd9624b7-d055-43da-930d-f3cbb788e4f5",
+          "uuid": "85d23c93-4e3e-4e75-86d3-f149da2abe1f",
           "title": "E2E: SignUp flujo básico",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\06_signup_flow.test.js",
           "file": "\\e2e\\tests\\06_signup_flow.test.js",
@@ -456,7 +456,7 @@
               "title": "\"before all\" hook in \"E2E: SignUp flujo básico\"",
               "fullTitle": "E2E: SignUp flujo básico \"before all\" hook in \"E2E: SignUp flujo básico\"",
               "timedOut": false,
-              "duration": 788,
+              "duration": 779,
               "state": null,
               "speed": null,
               "pass": false,
@@ -465,8 +465,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "e232b623-ab72-4a94-9f87-43492b7ce9b4",
-              "parentUUID": "fd9624b7-d055-43da-930d-f3cbb788e4f5",
+              "uuid": "6292c7df-d5b1-497d-98e1-e81bca180181",
+              "parentUUID": "85d23c93-4e3e-4e75-86d3-f149da2abe1f",
               "isHook": true,
               "skipped": false
             }
@@ -476,7 +476,7 @@
               "title": "\"after all\" hook in \"E2E: SignUp flujo básico\"",
               "fullTitle": "E2E: SignUp flujo básico \"after all\" hook in \"E2E: SignUp flujo básico\"",
               "timedOut": false,
-              "duration": 132,
+              "duration": 64,
               "state": null,
               "speed": null,
               "pass": false,
@@ -485,8 +485,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "857568ea-9bdd-4e32-ac07-3fa1c30c228e",
-              "parentUUID": "fd9624b7-d055-43da-930d-f3cbb788e4f5",
+              "uuid": "0c615040-716f-45f2-9680-89ecbb49cc31",
+              "parentUUID": "85d23c93-4e3e-4e75-86d3-f149da2abe1f",
               "isHook": true,
               "skipped": false
             }
@@ -496,7 +496,7 @@
               "title": "Completa formulario y navega a /signin en éxito (o muestra error si ya existe)",
               "fullTitle": "E2E: SignUp flujo básico Completa formulario y navega a /signin en éxito (o muestra error si ya existe)",
               "timedOut": false,
-              "duration": 10618,
+              "duration": 10002,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -505,26 +505,26 @@
               "context": null,
               "code": "await driver.get(`${BASE}/signup`);\nawait typeById(driver, 'username', user.username);\nawait typeById(driver, 'email', user.email);\nawait typeById(driver, 'password', user.password);\nawait typeById(driver, 'confirmPassword', user.password);\nawait clickByCss(driver, 'form button');\n// En muchos casos, el usuario ya existe; intentamos navegar a /signin en éxito\ntry {\n  await waitForUrl(driver, '/signin', 8000);\n} catch (_) {\n  // Si no redirige, continúa sin fallo (usuario duplicado es aceptable para E2E)\n}\nawait screenshot(driver, './e2e/.artifacts/signup_flow.png');",
               "err": {},
-              "uuid": "226871e5-60a4-4172-8f3e-1683beac9637",
-              "parentUUID": "fd9624b7-d055-43da-930d-f3cbb788e4f5",
+              "uuid": "968f8f9c-48af-48b6-a7d8-89a3a9893b6b",
+              "parentUUID": "85d23c93-4e3e-4e75-86d3-f149da2abe1f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "226871e5-60a4-4172-8f3e-1683beac9637"
+            "968f8f9c-48af-48b6-a7d8-89a3a9893b6b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10618,
+          "duration": 10002,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "a72afa93-55d2-4846-8916-ec9cdf729b76",
+          "uuid": "3d46f5a2-c337-462f-934f-d08f37926afb",
           "title": "E2E: Guardas de ruta - usuario",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\07_route_guard_user_private.test.js",
           "file": "\\e2e\\tests\\07_route_guard_user_private.test.js",
@@ -533,7 +533,7 @@
               "title": "\"before all\" hook in \"E2E: Guardas de ruta - usuario\"",
               "fullTitle": "E2E: Guardas de ruta - usuario \"before all\" hook in \"E2E: Guardas de ruta - usuario\"",
               "timedOut": false,
-              "duration": 835,
+              "duration": 668,
               "state": null,
               "speed": null,
               "pass": false,
@@ -542,8 +542,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "605b8438-8c05-4ad5-8eea-605d2c64186e",
-              "parentUUID": "a72afa93-55d2-4846-8916-ec9cdf729b76",
+              "uuid": "a543b588-0ab8-4991-b88e-62a71105ddcc",
+              "parentUUID": "3d46f5a2-c337-462f-934f-d08f37926afb",
               "isHook": true,
               "skipped": false
             }
@@ -553,7 +553,7 @@
               "title": "\"after all\" hook in \"E2E: Guardas de ruta - usuario\"",
               "fullTitle": "E2E: Guardas de ruta - usuario \"after all\" hook in \"E2E: Guardas de ruta - usuario\"",
               "timedOut": false,
-              "duration": 110,
+              "duration": 78,
               "state": null,
               "speed": null,
               "pass": false,
@@ -562,8 +562,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "93ee7886-5ae0-458a-a0c3-826f8ff509c8",
-              "parentUUID": "a72afa93-55d2-4846-8916-ec9cdf729b76",
+              "uuid": "0b906151-8ca0-4e9e-a77d-481146cb8633",
+              "parentUUID": "3d46f5a2-c337-462f-934f-d08f37926afb",
               "isHook": true,
               "skipped": false
             }
@@ -573,7 +573,7 @@
               "title": "Redirige a /signin si no autenticado al visitar /checkoutPage",
               "fullTitle": "E2E: Guardas de ruta - usuario Redirige a /signin si no autenticado al visitar /checkoutPage",
               "timedOut": false,
-              "duration": 3625,
+              "duration": 1567,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -582,8 +582,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/checkoutPage`);\nawait waitForUrl(driver, '/signin');",
               "err": {},
-              "uuid": "80cd67d3-31b8-4dbf-991e-63b439f5fa0c",
-              "parentUUID": "a72afa93-55d2-4846-8916-ec9cdf729b76",
+              "uuid": "5045f051-31c3-4a6b-8230-b84835c58682",
+              "parentUUID": "3d46f5a2-c337-462f-934f-d08f37926afb",
               "isHook": false,
               "skipped": false
             },
@@ -591,7 +591,7 @@
               "title": "Redirige a /signin si no autenticado al visitar /profile",
               "fullTitle": "E2E: Guardas de ruta - usuario Redirige a /signin si no autenticado al visitar /profile",
               "timedOut": false,
-              "duration": 841,
+              "duration": 536,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -600,27 +600,27 @@
               "context": null,
               "code": "await driver.get(`${BASE}/profile`);\nawait waitForUrl(driver, '/signin');",
               "err": {},
-              "uuid": "9b9dc2ef-0e63-4c15-93fa-9683bcafa4e6",
-              "parentUUID": "a72afa93-55d2-4846-8916-ec9cdf729b76",
+              "uuid": "341cacec-2521-482c-baf5-0458098b54f3",
+              "parentUUID": "3d46f5a2-c337-462f-934f-d08f37926afb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "80cd67d3-31b8-4dbf-991e-63b439f5fa0c",
-            "9b9dc2ef-0e63-4c15-93fa-9683bcafa4e6"
+            "5045f051-31c3-4a6b-8230-b84835c58682",
+            "341cacec-2521-482c-baf5-0458098b54f3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4466,
+          "duration": 2103,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "a005f94c-9258-487d-b79f-4ae9e2d7e59a",
+          "uuid": "3989e708-2f13-438a-b810-46d7bb6d1450",
           "title": "E2E: Páginas públicas (Enterprise/Contact)",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\08_public_pages.test.js",
           "file": "\\e2e\\tests\\08_public_pages.test.js",
@@ -629,7 +629,7 @@
               "title": "\"before all\" hook in \"E2E: Páginas públicas (Enterprise/Contact)\"",
               "fullTitle": "E2E: Páginas públicas (Enterprise/Contact) \"before all\" hook in \"E2E: Páginas públicas (Enterprise/Contact)\"",
               "timedOut": false,
-              "duration": 806,
+              "duration": 655,
               "state": null,
               "speed": null,
               "pass": false,
@@ -638,8 +638,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "94a5b15d-cf3e-4cd9-b9a6-debc9e81ebf2",
-              "parentUUID": "a005f94c-9258-487d-b79f-4ae9e2d7e59a",
+              "uuid": "62321855-abb9-40ca-8e15-def3d7426ca1",
+              "parentUUID": "3989e708-2f13-438a-b810-46d7bb6d1450",
               "isHook": true,
               "skipped": false
             }
@@ -649,7 +649,7 @@
               "title": "\"after all\" hook in \"E2E: Páginas públicas (Enterprise/Contact)\"",
               "fullTitle": "E2E: Páginas públicas (Enterprise/Contact) \"after all\" hook in \"E2E: Páginas públicas (Enterprise/Contact)\"",
               "timedOut": false,
-              "duration": 109,
+              "duration": 63,
               "state": null,
               "speed": null,
               "pass": false,
@@ -658,8 +658,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "a17d646e-307b-408e-b54a-5808a4821a9e",
-              "parentUUID": "a005f94c-9258-487d-b79f-4ae9e2d7e59a",
+              "uuid": "07cd4c41-8e57-42e4-ae4c-f67b701b62d7",
+              "parentUUID": "3989e708-2f13-438a-b810-46d7bb6d1450",
               "isHook": true,
               "skipped": false
             }
@@ -669,7 +669,7 @@
               "title": "Abre /enterprise y muestra el título",
               "fullTitle": "E2E: Páginas públicas (Enterprise/Contact) Abre /enterprise y muestra el título",
               "timedOut": false,
-              "duration": 2373,
+              "duration": 1780,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -678,8 +678,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/enterprise`);\nconst title = await getText(driver, 'h1');\nexpect(title).to.include('Lista tu vehículo');\nawait screenshot(driver, './e2e/.artifacts/enterprise.png');",
               "err": {},
-              "uuid": "2821de49-f3e7-4325-af77-2c988de6a543",
-              "parentUUID": "a005f94c-9258-487d-b79f-4ae9e2d7e59a",
+              "uuid": "6e8e08b1-3e83-4471-ac8c-35f47533cc92",
+              "parentUUID": "3989e708-2f13-438a-b810-46d7bb6d1450",
               "isHook": false,
               "skipped": false
             },
@@ -687,7 +687,7 @@
               "title": "Abre /contact y muestra contenido",
               "fullTitle": "E2E: Páginas públicas (Enterprise/Contact) Abre /contact y muestra contenido",
               "timedOut": false,
-              "duration": 1701,
+              "duration": 1113,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -696,27 +696,27 @@
               "context": null,
               "code": "await driver.get(`${BASE}/contact`);\nconst text = await getText(driver, 'div');\nexpect(text.toLowerCase()).to.include('contacto');\nawait screenshot(driver, './e2e/.artifacts/contact.png');",
               "err": {},
-              "uuid": "0815735f-0a4c-4645-88fe-8ba903aa67bd",
-              "parentUUID": "a005f94c-9258-487d-b79f-4ae9e2d7e59a",
+              "uuid": "08705146-7f9f-4867-95fa-523ba39a3b27",
+              "parentUUID": "3989e708-2f13-438a-b810-46d7bb6d1450",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2821de49-f3e7-4325-af77-2c988de6a543",
-            "0815735f-0a4c-4645-88fe-8ba903aa67bd"
+            "6e8e08b1-3e83-4471-ac8c-35f47533cc92",
+            "08705146-7f9f-4867-95fa-523ba39a3b27"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4074,
+          "duration": 2893,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+          "uuid": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
           "title": "E2E: Guardas Admin/Vendor y 404",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\09_admin_vendor_guards.test.js",
           "file": "\\e2e\\tests\\09_admin_vendor_guards.test.js",
@@ -725,7 +725,7 @@
               "title": "\"before all\" hook in \"E2E: Guardas Admin/Vendor y 404\"",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 \"before all\" hook in \"E2E: Guardas Admin/Vendor y 404\"",
               "timedOut": false,
-              "duration": 955,
+              "duration": 730,
               "state": null,
               "speed": null,
               "pass": false,
@@ -734,8 +734,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "7b08e405-1de6-41d0-9d3e-f9f8ca83cb79",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "3a03f821-59d6-4e4b-9c03-575345f74429",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": true,
               "skipped": false
             }
@@ -745,7 +745,7 @@
               "title": "\"after all\" hook in \"E2E: Guardas Admin/Vendor y 404\"",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 \"after all\" hook in \"E2E: Guardas Admin/Vendor y 404\"",
               "timedOut": false,
-              "duration": 125,
+              "duration": 58,
               "state": null,
               "speed": null,
               "pass": false,
@@ -754,8 +754,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "2fa5a9d7-b8cd-46af-9bb3-3c1a178e6eab",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "c4879ce2-ae03-4ec3-8629-c1907bf2caf1",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": true,
               "skipped": false
             }
@@ -765,7 +765,7 @@
               "title": "Redirige a /signin cuando visita /adminDashboard sin autenticación",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 Redirige a /signin cuando visita /adminDashboard sin autenticación",
               "timedOut": false,
-              "duration": 3127,
+              "duration": 1990,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -774,8 +774,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/adminDashboard`);\nawait waitForUrl(driver, '/signin');",
               "err": {},
-              "uuid": "589dfc2b-18b5-4d60-924b-389e5294c144",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "dc799b07-8c49-4655-b90b-8ffc959c1673",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": false,
               "skipped": false
             },
@@ -783,7 +783,7 @@
               "title": "Redirige a /vendorSignin cuando visita /vendorDashboard sin autenticación",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 Redirige a /vendorSignin cuando visita /vendorDashboard sin autenticación",
               "timedOut": false,
-              "duration": 809,
+              "duration": 1053,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -792,8 +792,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/vendorDashboard`);\nawait waitForUrl(driver, '/vendorSignin');",
               "err": {},
-              "uuid": "4ed2f198-1175-4217-82b1-ae9cfa1bda9c",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "96ca5232-9d11-4ce8-aa37-066e337e0eaa",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": false,
               "skipped": false
             },
@@ -801,7 +801,7 @@
               "title": "Desde /enterprise el enlace a vendorSignin está disponible",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 Desde /enterprise el enlace a vendorSignin está disponible",
               "timedOut": false,
-              "duration": 788,
+              "duration": 332,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -810,8 +810,8 @@
               "context": null,
               "code": "await driver.get(`${BASE}/enterprise`);\nconst text = await getText(driver, 'a[href=\"/vendorSignin\"]');\nexpect(text.toLowerCase()).to.include('iniciar sesión como vendedor');",
               "err": {},
-              "uuid": "4d979095-9a73-4909-a2c9-9a9fbcc86fb6",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "4b3794b0-4494-49c5-9d47-acc4b531415c",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": false,
               "skipped": false
             },
@@ -819,7 +819,7 @@
               "title": "Visitar una ruta inexistente muestra la página 404",
               "fullTitle": "E2E: Guardas Admin/Vendor y 404 Visitar una ruta inexistente muestra la página 404",
               "timedOut": false,
-              "duration": 759,
+              "duration": 333,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -828,29 +828,29 @@
               "context": null,
               "code": "await driver.get(`${BASE}/ruta-que-no-existe-123`);\nconst heading = await getText(driver, 'h1');\nexpect(heading).to.match(/uh-oh!/i);\nawait screenshot(driver, './e2e/.artifacts/404.png');",
               "err": {},
-              "uuid": "eea295b5-15b4-46ca-8e5e-ee67d733ec0e",
-              "parentUUID": "a5baadd4-b01f-4034-a50f-6d8bad5415c5",
+              "uuid": "1ddebc2a-c41e-42c7-8067-f250b5b38425",
+              "parentUUID": "849207a0-bb3d-4794-a8f8-e4fb1fad27ae",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "589dfc2b-18b5-4d60-924b-389e5294c144",
-            "4ed2f198-1175-4217-82b1-ae9cfa1bda9c",
-            "4d979095-9a73-4909-a2c9-9a9fbcc86fb6",
-            "eea295b5-15b4-46ca-8e5e-ee67d733ec0e"
+            "dc799b07-8c49-4655-b90b-8ffc959c1673",
+            "96ca5232-9d11-4ce8-aa37-066e337e0eaa",
+            "4b3794b0-4494-49c5-9d47-acc4b531415c",
+            "1ddebc2a-c41e-42c7-8067-f250b5b38425"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5483,
+          "duration": 3708,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "7fba4858-9237-41db-8cf0-9cff791ea208",
+          "uuid": "2e01fe9d-41cd-427e-9f84-a0144e280356",
           "title": "E2E: Enterprise -> Vendor Signin link",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\10_enterprise_vendor_link.test.js",
           "file": "\\e2e\\tests\\10_enterprise_vendor_link.test.js",
@@ -859,7 +859,7 @@
               "title": "\"before all\" hook in \"E2E: Enterprise -> Vendor Signin link\"",
               "fullTitle": "E2E: Enterprise -> Vendor Signin link \"before all\" hook in \"E2E: Enterprise -> Vendor Signin link\"",
               "timedOut": false,
-              "duration": 775,
+              "duration": 654,
               "state": null,
               "speed": null,
               "pass": false,
@@ -868,8 +868,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "d8ff914f-a2d0-41f2-8813-290a46bc6561",
-              "parentUUID": "7fba4858-9237-41db-8cf0-9cff791ea208",
+              "uuid": "38d614f2-a766-4cf0-b43b-6d6ea0376907",
+              "parentUUID": "2e01fe9d-41cd-427e-9f84-a0144e280356",
               "isHook": true,
               "skipped": false
             }
@@ -879,7 +879,7 @@
               "title": "\"after all\" hook in \"E2E: Enterprise -> Vendor Signin link\"",
               "fullTitle": "E2E: Enterprise -> Vendor Signin link \"after all\" hook in \"E2E: Enterprise -> Vendor Signin link\"",
               "timedOut": false,
-              "duration": 114,
+              "duration": 41,
               "state": null,
               "speed": null,
               "pass": false,
@@ -888,8 +888,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "daee21e3-9e4a-4554-a7ab-7029ae45852a",
-              "parentUUID": "7fba4858-9237-41db-8cf0-9cff791ea208",
+              "uuid": "d0b914e0-e07e-48c4-abd4-55be0716c4c6",
+              "parentUUID": "2e01fe9d-41cd-427e-9f84-a0144e280356",
               "isHook": true,
               "skipped": false
             }
@@ -899,7 +899,7 @@
               "title": "Hace click en el enlace de vendor y navega a /vendorSignin",
               "fullTitle": "E2E: Enterprise -> Vendor Signin link Hace click en el enlace de vendor y navega a /vendorSignin",
               "timedOut": false,
-              "duration": 2293,
+              "duration": 1931,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -908,26 +908,26 @@
               "context": null,
               "code": "await driver.get(`${BASE}/enterprise`);\nawait clickByCss(driver, 'a[href=\"/vendorSignin\"]');\nawait waitForUrl(driver, '/vendorSignin');\nconst heading = await getText(driver, 'h1');\nexpect(heading.toLowerCase()).to.include('iniciar sesión');\nawait screenshot(driver, './e2e/.artifacts/vendor_link.png');",
               "err": {},
-              "uuid": "9231aba9-2c0f-4a44-bbdf-e72736d2231f",
-              "parentUUID": "7fba4858-9237-41db-8cf0-9cff791ea208",
+              "uuid": "afb5e52b-34e5-46c4-b549-7640eed29bc7",
+              "parentUUID": "2e01fe9d-41cd-427e-9f84-a0144e280356",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9231aba9-2c0f-4a44-bbdf-e72736d2231f"
+            "afb5e52b-34e5-46c4-b549-7640eed29bc7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2293,
+          "duration": 1931,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "cb78fb0b-2f61-4052-a546-69e503a01bc0",
+          "uuid": "6909ac5a-ebf2-498a-b8b7-8a3a787296d3",
           "title": "E2E: Guard - /availableVehicles requiere autenticación",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\11_available_vehicles_guard.test.js",
           "file": "\\e2e\\tests\\11_available_vehicles_guard.test.js",
@@ -936,7 +936,7 @@
               "title": "\"before all\" hook in \"E2E: Guard - /availableVehicles requiere autenticación\"",
               "fullTitle": "E2E: Guard - /availableVehicles requiere autenticación \"before all\" hook in \"E2E: Guard - /availableVehicles requiere autenticación\"",
               "timedOut": false,
-              "duration": 799,
+              "duration": 653,
               "state": null,
               "speed": null,
               "pass": false,
@@ -945,8 +945,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "93270d74-a966-4c4d-99f5-57e842a81939",
-              "parentUUID": "cb78fb0b-2f61-4052-a546-69e503a01bc0",
+              "uuid": "2d91ed29-5582-4fe3-ac6a-620999fe5219",
+              "parentUUID": "6909ac5a-ebf2-498a-b8b7-8a3a787296d3",
               "isHook": true,
               "skipped": false
             }
@@ -956,7 +956,7 @@
               "title": "\"after all\" hook in \"E2E: Guard - /availableVehicles requiere autenticación\"",
               "fullTitle": "E2E: Guard - /availableVehicles requiere autenticación \"after all\" hook in \"E2E: Guard - /availableVehicles requiere autenticación\"",
               "timedOut": false,
-              "duration": 125,
+              "duration": 58,
               "state": null,
               "speed": null,
               "pass": false,
@@ -965,8 +965,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "158439db-4508-451f-8bb9-aec922a58e2b",
-              "parentUUID": "cb78fb0b-2f61-4052-a546-69e503a01bc0",
+              "uuid": "518fd995-fd5a-4cc0-934c-2af357f55f0f",
+              "parentUUID": "6909ac5a-ebf2-498a-b8b7-8a3a787296d3",
               "isHook": true,
               "skipped": false
             }
@@ -976,7 +976,7 @@
               "title": "Redirige a /signin al visitar /availableVehicles sin sesión",
               "fullTitle": "E2E: Guard - /availableVehicles requiere autenticación Redirige a /signin al visitar /availableVehicles sin sesión",
               "timedOut": false,
-              "duration": 1767,
+              "duration": 1654,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -985,26 +985,26 @@
               "context": null,
               "code": "await driver.get('http://localhost:5173/availableVehicles');\nawait waitForUrl(driver, '/signin');",
               "err": {},
-              "uuid": "41973c7e-f3f8-4287-8738-5f9df7f932af",
-              "parentUUID": "cb78fb0b-2f61-4052-a546-69e503a01bc0",
+              "uuid": "d99fe3e7-b777-480b-a0c3-8023da06db21",
+              "parentUUID": "6909ac5a-ebf2-498a-b8b7-8a3a787296d3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "41973c7e-f3f8-4287-8738-5f9df7f932af"
+            "d99fe3e7-b777-480b-a0c3-8023da06db21"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1767,
+          "duration": 1654,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
         },
         {
-          "uuid": "a61d5156-4d99-4880-848d-037c788713c1",
+          "uuid": "17e9fce4-067e-4c2c-846c-4ead5fe0f743",
           "title": "E2E: Vendor Signin - elementos",
           "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\12_vendor_signin_page.test.js",
           "file": "\\e2e\\tests\\12_vendor_signin_page.test.js",
@@ -1013,7 +1013,7 @@
               "title": "\"before all\" hook in \"E2E: Vendor Signin - elementos\"",
               "fullTitle": "E2E: Vendor Signin - elementos \"before all\" hook in \"E2E: Vendor Signin - elementos\"",
               "timedOut": false,
-              "duration": 794,
+              "duration": 606,
               "state": null,
               "speed": null,
               "pass": false,
@@ -1022,8 +1022,8 @@
               "context": null,
               "code": "driver = await buildDriver(true);",
               "err": {},
-              "uuid": "f7d66ca7-4f6c-4f4e-9f14-f03e34a2d57a",
-              "parentUUID": "a61d5156-4d99-4880-848d-037c788713c1",
+              "uuid": "86c8c025-67d6-4f4b-bdb6-328a4ce33623",
+              "parentUUID": "17e9fce4-067e-4c2c-846c-4ead5fe0f743",
               "isHook": true,
               "skipped": false
             }
@@ -1033,7 +1033,7 @@
               "title": "\"after all\" hook in \"E2E: Vendor Signin - elementos\"",
               "fullTitle": "E2E: Vendor Signin - elementos \"after all\" hook in \"E2E: Vendor Signin - elementos\"",
               "timedOut": false,
-              "duration": 116,
+              "duration": 67,
               "state": null,
               "speed": null,
               "pass": false,
@@ -1042,8 +1042,8 @@
               "context": null,
               "code": "if (driver) await driver.quit();",
               "err": {},
-              "uuid": "88b8037e-85df-4f12-bc03-df7553d339e6",
-              "parentUUID": "a61d5156-4d99-4880-848d-037c788713c1",
+              "uuid": "2750253a-012e-495c-8c92-a2171f46ddd0",
+              "parentUUID": "17e9fce4-067e-4c2c-846c-4ead5fe0f743",
               "isHook": true,
               "skipped": false
             }
@@ -1053,7 +1053,7 @@
               "title": "Carga /vendorSignin y muestra inputs email y password",
               "fullTitle": "E2E: Vendor Signin - elementos Carga /vendorSignin y muestra inputs email y password",
               "timedOut": false,
-              "duration": 3296,
+              "duration": 1717,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -1062,23 +1062,178 @@
               "context": null,
               "code": "await driver.get(`${BASE}/vendorSignin`);\nconst email = await waitForVisible(driver, By.id('email'));\nconst password = await waitForVisible(driver, By.id('password'));\nexpect(await email.isDisplayed()).to.equal(true);\nexpect(await password.isDisplayed()).to.equal(true);",
               "err": {},
-              "uuid": "c1faa3e3-9bfd-4ea0-8cfa-63ee4c98e49e",
-              "parentUUID": "a61d5156-4d99-4880-848d-037c788713c1",
+              "uuid": "5d15785d-c9fa-41b6-8dc7-7241645c6c06",
+              "parentUUID": "17e9fce4-067e-4c2c-846c-4ead5fe0f743",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c1faa3e3-9bfd-4ea0-8cfa-63ee4c98e49e"
+            "5d15785d-c9fa-41b6-8dc7-7241645c6c06"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3296,
+          "duration": 1717,
           "root": false,
           "rootEmpty": false,
           "_timeout": 120000
+        },
+        {
+          "uuid": "2a2e8797-c978-4066-8fbe-a4073e8e456b",
+          "title": "API E2E: Auth validation",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\13_api_auth_validation.test.js",
+          "file": "\\e2e\\tests\\13_api_auth_validation.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /api/auth/signin sin body -> 400",
+              "fullTitle": "API E2E: Auth validation POST /api/auth/signin sin body -> 400",
+              "timedOut": false,
+              "duration": 28,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await request(BASE_API)\n  .post('/api/auth/signin')\n  .send({});\nexpect(res.status).to.equal(400);\nconst msg = (res.body && (res.body.message || res.body.error)) || '';\nexpect(msg.toLowerCase()).to.match(/email|password|required/);",
+              "err": {},
+              "uuid": "fb194d09-0a45-40f0-8d29-607de6524563",
+              "parentUUID": "2a2e8797-c978-4066-8fbe-a4073e8e456b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST /api/auth/refreshToken sin Authorization -> 403",
+              "fullTitle": "API E2E: Auth validation POST /api/auth/refreshToken sin Authorization -> 403",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await request(BASE_API)\n  .post('/api/auth/refreshToken');\nexpect(res.status).to.equal(403);",
+              "err": {},
+              "uuid": "8bc96a9b-e61c-4f9b-a909-4645cba5720e",
+              "parentUUID": "2a2e8797-c978-4066-8fbe-a4073e8e456b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb194d09-0a45-40f0-8d29-607de6524563",
+            "8bc96a9b-e61c-4f9b-a909-4645cba5720e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        },
+        {
+          "uuid": "f8f6b0bd-41bc-4dda-9dcf-96f5a7501949",
+          "title": "API E2E: User route guards (sin token)",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\14_api_user_guards.test.js",
+          "file": "\\e2e\\tests\\14_api_user_guards.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "DELETE /api/user/delete/:id -> 401/403",
+              "fullTitle": "API E2E: User route guards (sin token) DELETE /api/user/delete/:id -> 401/403",
+              "timedOut": false,
+              "duration": 18,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await request(BASE_API)\n  .delete('/api/user/delete/64b9f6b7e0f0000000000000');\nexpect([401, 403]).to.include(res.status);",
+              "err": {},
+              "uuid": "a45abb5f-98e1-4ee3-8057-55c736d86bce",
+              "parentUUID": "f8f6b0bd-41bc-4dda-9dcf-96f5a7501949",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST /api/user/razorpay -> 401/403",
+              "fullTitle": "API E2E: User route guards (sin token) POST /api/user/razorpay -> 401/403",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await request(BASE_API)\n  .post('/api/user/razorpay')\n  .send({ amount: 1000, currency: 'INR' });\nexpect([401, 403]).to.include(res.status);",
+              "err": {},
+              "uuid": "0e9e23c9-478b-4d27-8f22-a89cf89d6b71",
+              "parentUUID": "f8f6b0bd-41bc-4dda-9dcf-96f5a7501949",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a45abb5f-98e1-4ee3-8057-55c736d86bce",
+            "0e9e23c9-478b-4d27-8f22-a89cf89d6b71"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        },
+        {
+          "uuid": "fde92734-4b6b-4592-b014-4e9de0f5d67d",
+          "title": "API E2E: Public endpoints",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\e2e\\tests\\15_api_public_endpoints.test.js",
+          "file": "\\e2e\\tests\\15_api_public_endpoints.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /api/user/listAllVehicles -> 200 y arreglo",
+              "fullTitle": "API E2E: Public endpoints GET /api/user/listAllVehicles -> 200 y arreglo",
+              "timedOut": false,
+              "duration": 13,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await request(BASE_API)\n  .get('/api/user/listAllVehicles');\nexpect([200, 204]).to.include(res.status);\nif (res.status === 200) {\n  expect(res.body).to.be.an('array');\n}",
+              "err": {},
+              "uuid": "5bdafaf8-b2c8-4d5a-8d65-8ff0f587b3a7",
+              "parentUUID": "fde92734-4b6b-4592-b014-4e9de0f5d67d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5bdafaf8-b2c8-4d5a-8d65-8ff0f587b3a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
         }
       ],
       "passes": [],

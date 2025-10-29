@@ -1,0 +1,1147 @@
+{
+  "stats": {
+    "suites": 12,
+    "tests": 17,
+    "passes": 1,
+    "pending": 0,
+    "failures": 16,
+    "start": "2025-10-29T23:44:31.244Z",
+    "end": "2025-10-29T23:45:24.580Z",
+    "duration": 53336,
+    "testsRegistered": 17,
+    "passPercent": 5.88235294117647,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dde06858-cd86-4e57-9fc2-4768fc77a225",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db70a469-0142-42b5-a2e3-cde6a8e66bc8",
+          "title": "Screenplay: Home navegación",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\01_home_navigation.test.js",
+          "file": "\\tests\\01_home_navigation.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Home navegación\"",
+              "fullTitle": "Screenplay: Home navegación \"before all\" hook in \"Screenplay: Home navegación\"",
+              "timedOut": false,
+              "duration": 1252,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('User').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "01a9d27a-88dd-49a1-8392-003726cdbb8a",
+              "parentUUID": "db70a469-0142-42b5-a2e3-cde6a8e66bc8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Home navegación\"",
+              "fullTitle": "Screenplay: Home navegación \"after all\" hook in \"Screenplay: Home navegación\"",
+              "timedOut": false,
+              "duration": 74,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "0e7975e4-80ee-4d95-bbcb-9c78d56f0d34",
+              "parentUUID": "db70a469-0142-42b5-a2e3-cde6a8e66bc8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Home -> /vehicles",
+              "fullTitle": "Screenplay: Home navegación Home -> /vehicles",
+              "timedOut": false,
+              "duration": 4961,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/`),\n  Click.on(SeeVehiclesButton)\n);\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/vehicles');",
+              "err": {
+                "message": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (258, 703)\n  (Session info: chrome=141.0.7390.123)",
+                "estack": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (258, 703)\n  (Session info: chrome=141.0.7390.123)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:524:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:456:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Click.performAs (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/interactions/Click.js:13:5)\n    at async Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/01_home_navigation.test.js:32:5)",
+                "diff": null
+              },
+              "uuid": "6a1560d8-f70d-4b0f-9b06-b5acb6e0a469",
+              "parentUUID": "db70a469-0142-42b5-a2e3-cde6a8e66bc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home -> /enterprise",
+              "fullTitle": "Screenplay: Home navegación Home -> /enterprise",
+              "timedOut": false,
+              "duration": 2152,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/`),\n  Click.on(EnterpriseButton)\n);\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/enterprise');",
+              "err": {
+                "message": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (552, 703)\n  (Session info: chrome=141.0.7390.123)",
+                "estack": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (552, 703)\n  (Session info: chrome=141.0.7390.123)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:524:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:456:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Click.performAs (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/interactions/Click.js:13:5)\n    at async Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/01_home_navigation.test.js:41:5)",
+                "diff": null
+              },
+              "uuid": "089cd3c1-11d9-4740-911e-940f638fb9e1",
+              "parentUUID": "db70a469-0142-42b5-a2e3-cde6a8e66bc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6a1560d8-f70d-4b0f-9b06-b5acb6e0a469",
+            "089cd3c1-11d9-4740-911e-940f638fb9e1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7113,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "e894f296-d47d-4dbb-bcee-a6a642ba9687",
+          "title": "Screenplay: Guards de usuario (sin sesión)",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\02_guards_user.test.js",
+          "file": "\\tests\\02_guards_user.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Guards de usuario (sin sesión)\"",
+              "fullTitle": "Screenplay: Guards de usuario (sin sesión) \"before all\" hook in \"Screenplay: Guards de usuario (sin sesión)\"",
+              "timedOut": false,
+              "duration": 647,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "c6e81b6c-e1dc-4f5e-83b4-6eaef1ce13bc",
+              "parentUUID": "e894f296-d47d-4dbb-bcee-a6a642ba9687",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Guards de usuario (sin sesión)\"",
+              "fullTitle": "Screenplay: Guards de usuario (sin sesión) \"after all\" hook in \"Screenplay: Guards de usuario (sin sesión)\"",
+              "timedOut": false,
+              "duration": 69,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "fdaf56a9-9289-4dee-ae6d-7057c814da1c",
+              "parentUUID": "e894f296-d47d-4dbb-bcee-a6a642ba9687",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/checkoutPage -> /signin",
+              "fullTitle": "Screenplay: Guards de usuario (sin sesión) /checkoutPage -> /signin",
+              "timedOut": false,
+              "duration": 5816,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/checkoutPage`)\n);\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/02_guards_user.test.js:28:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "92ab4468-ab8b-487e-b7e3-aad99937ca97",
+              "parentUUID": "e894f296-d47d-4dbb-bcee-a6a642ba9687",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "/profile -> /signin",
+              "fullTitle": "Screenplay: Guards de usuario (sin sesión) /profile -> /signin",
+              "timedOut": false,
+              "duration": 1029,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/profile`)\n);\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/02_guards_user.test.js:36:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "70250eb8-5c7c-4a80-aeca-a915fe319b19",
+              "parentUUID": "e894f296-d47d-4dbb-bcee-a6a642ba9687",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "92ab4468-ab8b-487e-b7e3-aad99937ca97",
+            "70250eb8-5c7c-4a80-aeca-a915fe319b19"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "1866081b-8096-4840-b8be-d8c6cabf94c6",
+          "title": "Screenplay: Páginas públicas",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\03_public_pages.test.js",
+          "file": "\\tests\\03_public_pages.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Páginas públicas\"",
+              "fullTitle": "Screenplay: Páginas públicas \"before all\" hook in \"Screenplay: Páginas públicas\"",
+              "timedOut": false,
+              "duration": 593,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "9abff73a-da41-4091-96e4-9c57ec414ea9",
+              "parentUUID": "1866081b-8096-4840-b8be-d8c6cabf94c6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Páginas públicas\"",
+              "fullTitle": "Screenplay: Páginas públicas \"after all\" hook in \"Screenplay: Páginas públicas\"",
+              "timedOut": false,
+              "duration": 53,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "da01148e-2150-4b10-ba80-c54600a780f6",
+              "parentUUID": "1866081b-8096-4840-b8be-d8c6cabf94c6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/enterprise muestra título",
+              "fullTitle": "Screenplay: Páginas públicas /enterprise muestra título",
+              "timedOut": false,
+              "duration": 1326,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/enterprise`));\nconst text = await user.asks(PageText);\nexpect(text.toLowerCase()).to.include('lista tu vehículo');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/03_public_pages.test.js:26:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "90b32c3b-e8ed-4ab4-92ee-9a8eaad8bad3",
+              "parentUUID": "1866081b-8096-4840-b8be-d8c6cabf94c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "/contact muestra \"Contacto\"",
+              "fullTitle": "Screenplay: Páginas públicas /contact muestra \"Contacto\"",
+              "timedOut": false,
+              "duration": 1128,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/contact`));\nconst text = await user.asks(PageText);\nexpect(text.toLowerCase()).to.include('contacto');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/03_public_pages.test.js:32:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "fcb38c1f-6bb9-4115-be57-800bf2693a12",
+              "parentUUID": "1866081b-8096-4840-b8be-d8c6cabf94c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "90b32c3b-e8ed-4ab4-92ee-9a8eaad8bad3",
+            "fcb38c1f-6bb9-4115-be57-800bf2693a12"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2454,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "0f3192e5-bbc4-4477-9139-7650e4b5d134",
+          "title": "Screenplay: Vendor/Admin guards",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\04_vendor_admin_guards.test.js",
+          "file": "\\tests\\04_vendor_admin_guards.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Vendor/Admin guards\"",
+              "fullTitle": "Screenplay: Vendor/Admin guards \"before all\" hook in \"Screenplay: Vendor/Admin guards\"",
+              "timedOut": false,
+              "duration": 613,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "41d6abf8-bcd6-4d1d-9824-5e19a0d9a052",
+              "parentUUID": "0f3192e5-bbc4-4477-9139-7650e4b5d134",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Vendor/Admin guards\"",
+              "fullTitle": "Screenplay: Vendor/Admin guards \"after all\" hook in \"Screenplay: Vendor/Admin guards\"",
+              "timedOut": false,
+              "duration": 62,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "eda272cc-6622-4d75-89ef-e97e29af88f8",
+              "parentUUID": "0f3192e5-bbc4-4477-9139-7650e4b5d134",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/vendorDashboard -> /vendorSignin",
+              "fullTitle": "Screenplay: Vendor/Admin guards /vendorDashboard -> /vendorSignin",
+              "timedOut": false,
+              "duration": 1583,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/vendorDashboard`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/vendorSignin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/04_vendor_admin_guards.test.js:26:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "a67719fe-fab7-492c-8967-32890958b111",
+              "parentUUID": "0f3192e5-bbc4-4477-9139-7650e4b5d134",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "/adminDashboard -> /signin",
+              "fullTitle": "Screenplay: Vendor/Admin guards /adminDashboard -> /signin",
+              "timedOut": false,
+              "duration": 548,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/adminDashboard`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/04_vendor_admin_guards.test.js:32:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "bf8c7c0f-31be-4180-9123-c5d2ef4c882f",
+              "parentUUID": "0f3192e5-bbc4-4477-9139-7650e4b5d134",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a67719fe-fab7-492c-8967-32890958b111",
+            "bf8c7c0f-31be-4180-9123-c5d2ef4c882f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2131,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "5b520e1b-7324-4574-ad5a-e184e355e890",
+          "title": "Screenplay: 404 page",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\05_404_page.test.js",
+          "file": "\\tests\\05_404_page.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: 404 page\"",
+              "fullTitle": "Screenplay: 404 page \"before all\" hook in \"Screenplay: 404 page\"",
+              "timedOut": false,
+              "duration": 640,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "d1937d98-9c3c-47e0-8757-2d591601295e",
+              "parentUUID": "5b520e1b-7324-4574-ad5a-e184e355e890",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: 404 page\"",
+              "fullTitle": "Screenplay: 404 page \"after all\" hook in \"Screenplay: 404 page\"",
+              "timedOut": false,
+              "duration": 45,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "12609060-e055-492a-b33f-4e44b9d575fc",
+              "parentUUID": "5b520e1b-7324-4574-ad5a-e184e355e890",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "ruta inexistente muestra Uh-oh!",
+              "fullTitle": "Screenplay: 404 page ruta inexistente muestra Uh-oh!",
+              "timedOut": false,
+              "duration": 1547,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/ruta-que-no-existe-123`));\nconst text = await user.asks(PageText);\nexpect(text.toLowerCase()).to.include('uh-oh');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/05_404_page.test.js:26:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "7a580dd2-ea90-43f8-9ac9-c4e790a789a6",
+              "parentUUID": "5b520e1b-7324-4574-ad5a-e184e355e890",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7a580dd2-ea90-43f8-9ac9-c4e790a789a6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1547,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "d6582656-4b5a-4b5e-822d-44f1634a6fe6",
+          "title": "Screenplay: Enterprise vendor link",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\06_enterprise_vendor_link.test.js",
+          "file": "\\tests\\06_enterprise_vendor_link.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Enterprise vendor link\"",
+              "fullTitle": "Screenplay: Enterprise vendor link \"before all\" hook in \"Screenplay: Enterprise vendor link\"",
+              "timedOut": false,
+              "duration": 755,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "8c80a3b2-7df7-4d61-8d0f-29e83c0b449b",
+              "parentUUID": "d6582656-4b5a-4b5e-822d-44f1634a6fe6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Enterprise vendor link\"",
+              "fullTitle": "Screenplay: Enterprise vendor link \"after all\" hook in \"Screenplay: Enterprise vendor link\"",
+              "timedOut": false,
+              "duration": 64,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "6877b0f8-eb2c-4fdb-ae09-9c3b890ed35e",
+              "parentUUID": "d6582656-4b5a-4b5e-822d-44f1634a6fe6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "desde /enterprise hacia /vendorSignin",
+              "fullTitle": "Screenplay: Enterprise vendor link desde /enterprise hacia /vendorSignin",
+              "timedOut": false,
+              "duration": 1634,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/enterprise`),\n  Click.on(VendorLink)\n);\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/vendorSignin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/06_enterprise_vendor_link.test.js:34:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "dc47c83a-215b-4d42-ab65-7b2390a2eb70",
+              "parentUUID": "d6582656-4b5a-4b5e-822d-44f1634a6fe6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "dc47c83a-215b-4d42-ab65-7b2390a2eb70"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1634,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "cf6ca624-651a-45ab-a0bd-f36d9f68ed76",
+          "title": "Screenplay: Guards available/variants",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\07_available_allvariants_guards.test.js",
+          "file": "\\tests\\07_available_allvariants_guards.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Guards available/variants\"",
+              "fullTitle": "Screenplay: Guards available/variants \"before all\" hook in \"Screenplay: Guards available/variants\"",
+              "timedOut": false,
+              "duration": 729,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "d3a34fdf-e172-4aff-b966-41a048a4b087",
+              "parentUUID": "cf6ca624-651a-45ab-a0bd-f36d9f68ed76",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Guards available/variants\"",
+              "fullTitle": "Screenplay: Guards available/variants \"after all\" hook in \"Screenplay: Guards available/variants\"",
+              "timedOut": false,
+              "duration": 52,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "f98aa540-df59-4713-909c-699a7438ae83",
+              "parentUUID": "cf6ca624-651a-45ab-a0bd-f36d9f68ed76",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/availableVehicles -> /signin",
+              "fullTitle": "Screenplay: Guards available/variants /availableVehicles -> /signin",
+              "timedOut": false,
+              "duration": 1586,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/availableVehicles`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/07_available_allvariants_guards.test.js:26:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "b0cdea12-4b7a-4119-913d-f3f854f042ae",
+              "parentUUID": "cf6ca624-651a-45ab-a0bd-f36d9f68ed76",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "/allVariants -> /signin",
+              "fullTitle": "Screenplay: Guards available/variants /allVariants -> /signin",
+              "timedOut": false,
+              "duration": 1073,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/allVariants`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/07_available_allvariants_guards.test.js:32:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "33c56814-8e8d-4717-a617-50e1373d3c84",
+              "parentUUID": "cf6ca624-651a-45ab-a0bd-f36d9f68ed76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b0cdea12-4b7a-4119-913d-f3f854f042ae",
+            "33c56814-8e8d-4717-a617-50e1373d3c84"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "8d399af1-79a3-4c40-a76a-899564e9720c",
+          "title": "Screenplay: Vehicles -> Checkout flow (sin sesión)",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\08_vehicles_checkout_flow.test.js",
+          "file": "\\tests\\08_vehicles_checkout_flow.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Vehicles -> Checkout flow (sin sesión)\"",
+              "fullTitle": "Screenplay: Vehicles -> Checkout flow (sin sesión) \"before all\" hook in \"Screenplay: Vehicles -> Checkout flow (sin sesión)\"",
+              "timedOut": false,
+              "duration": 647,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "fffab908-c777-4b02-8103-30869ba88531",
+              "parentUUID": "8d399af1-79a3-4c40-a76a-899564e9720c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Vehicles -> Checkout flow (sin sesión)\"",
+              "fullTitle": "Screenplay: Vehicles -> Checkout flow (sin sesión) \"after all\" hook in \"Screenplay: Vehicles -> Checkout flow (sin sesión)\"",
+              "timedOut": false,
+              "duration": 43,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "ec67b81a-5b71-4962-824f-88981e9a529a",
+              "parentUUID": "8d399af1-79a3-4c40-a76a-899564e9720c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "desde Home ir a Vehicles y al intentar reservar, cae en /signin",
+              "fullTitle": "Screenplay: Vehicles -> Checkout flow (sin sesión) desde Home ir a Vehicles y al intentar reservar, cae en /signin",
+              "timedOut": false,
+              "duration": 4917,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(\n  Open.url(`${BASE}/`),\n  Click.on(VehiclesNav)\n);\n// Intentar click en un botón \"Reservar Auto\" si existe; si no, navegar directo a checkout\ntry {\n  await user.attemptsTo(Click.on(ReserveButton));\n} catch (e) {\n  await user.attemptsTo(Open.url(`${BASE}/checkoutPage`));\n}\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (258, 703)\n  (Session info: chrome=141.0.7390.123)",
+                "estack": "ElementClickInterceptedError: element click intercepted: Element is not clickable at point (258, 703)\n  (Session info: chrome=141.0.7390.123)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:524:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:456:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Click.performAs (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/interactions/Click.js:13:5)\n    at async Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/08_vehicles_checkout_flow.test.js:33:5)",
+                "diff": null
+              },
+              "uuid": "70b93ad3-cb4c-4daf-afed-414b066d795d",
+              "parentUUID": "8d399af1-79a3-4c40-a76a-899564e9720c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "70b93ad3-cb4c-4daf-afed-414b066d795d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4917,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "307d4434-4efe-44e8-8fa9-37cdc43f648a",
+          "title": "Screenplay: Profile nested guard",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\09_profile_nested_guard.test.js",
+          "file": "\\tests\\09_profile_nested_guard.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Profile nested guard\"",
+              "fullTitle": "Screenplay: Profile nested guard \"before all\" hook in \"Screenplay: Profile nested guard\"",
+              "timedOut": false,
+              "duration": 585,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "ce3f835f-cdd9-438c-a9a7-a66a85158425",
+              "parentUUID": "307d4434-4efe-44e8-8fa9-37cdc43f648a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Profile nested guard\"",
+              "fullTitle": "Screenplay: Profile nested guard \"after all\" hook in \"Screenplay: Profile nested guard\"",
+              "timedOut": false,
+              "duration": 61,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "047977c4-f94d-4953-9d28-31d76800db2d",
+              "parentUUID": "307d4434-4efe-44e8-8fa9-37cdc43f648a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/profile/orders -> /signin",
+              "fullTitle": "Screenplay: Profile nested guard /profile/orders -> /signin",
+              "timedOut": false,
+              "duration": 5563,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/profile/orders`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/09_profile_nested_guard.test.js:24:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "55776de2-6f7f-45b0-9c73-b69ad08ccc2f",
+              "parentUUID": "307d4434-4efe-44e8-8fa9-37cdc43f648a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "55776de2-6f7f-45b0-9c73-b69ad08ccc2f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5563,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "aa4ee812-cda3-406c-8a7e-48b6ebbff6f0",
+          "title": "Screenplay: VehicleDetails guard",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\10_vehicle_details_guard.test.js",
+          "file": "\\tests\\10_vehicle_details_guard.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: VehicleDetails guard\"",
+              "fullTitle": "Screenplay: VehicleDetails guard \"before all\" hook in \"Screenplay: VehicleDetails guard\"",
+              "timedOut": false,
+              "duration": 642,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "4dfb9b79-77c3-41b2-be44-e04aefefe00f",
+              "parentUUID": "aa4ee812-cda3-406c-8a7e-48b6ebbff6f0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: VehicleDetails guard\"",
+              "fullTitle": "Screenplay: VehicleDetails guard \"after all\" hook in \"Screenplay: VehicleDetails guard\"",
+              "timedOut": false,
+              "duration": 61,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "f95b682b-b922-4605-bb15-d7e649db236b",
+              "parentUUID": "aa4ee812-cda3-406c-8a7e-48b6ebbff6f0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "/vehicleDetails -> /signin",
+              "fullTitle": "Screenplay: VehicleDetails guard /vehicleDetails -> /signin",
+              "timedOut": false,
+              "duration": 3403,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/vehicleDetails`));\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/signin');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/10_vehicle_details_guard.test.js:24:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "1cf79662-9b13-4f29-b8b2-52e4ecd0e95e",
+              "parentUUID": "aa4ee812-cda3-406c-8a7e-48b6ebbff6f0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1cf79662-9b13-4f29-b8b2-52e4ecd0e95e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3403,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "ef2a139a-6d49-4042-8a41-1b967ce02cc5",
+          "title": "Screenplay: Enterprise link text",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\11_enterprise_link_text.test.js",
+          "file": "\\tests\\11_enterprise_link_text.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Enterprise link text\"",
+              "fullTitle": "Screenplay: Enterprise link text \"before all\" hook in \"Screenplay: Enterprise link text\"",
+              "timedOut": false,
+              "duration": 663,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "1d8a5d08-9c3e-42f9-a882-4e722d7e24d5",
+              "parentUUID": "ef2a139a-6d49-4042-8a41-1b967ce02cc5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Enterprise link text\"",
+              "fullTitle": "Screenplay: Enterprise link text \"after all\" hook in \"Screenplay: Enterprise link text\"",
+              "timedOut": false,
+              "duration": 55,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "8c391c58-c564-4f17-b125-4f268a2f3a91",
+              "parentUUID": "ef2a139a-6d49-4042-8a41-1b967ce02cc5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "link a vendorSignin visible en /enterprise",
+              "fullTitle": "Screenplay: Enterprise link text link a vendorSignin visible en /enterprise",
+              "timedOut": false,
+              "duration": 2007,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/enterprise`));\nconst { driver } = user.abilityTo(BrowseTheWeb);\nconst el = await driver.findElement(VendorLink.locator);\nconst text = await el.getText();\nexpect(text.toLowerCase()).to.contain('iniciar sesión como vendedor');",
+              "err": {},
+              "uuid": "9719fdfe-110e-433a-bae1-d79270d269c6",
+              "parentUUID": "ef2a139a-6d49-4042-8a41-1b967ce02cc5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9719fdfe-110e-433a-bae1-d79270d269c6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2007,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "d0e4a0ae-5701-484e-a44f-a01cdae43cdd",
+          "title": "Screenplay: Home -> Contact",
+          "fullFile": "C:\\Users\\Usuario\\Downloads\\Alquiler_Autos1\\screenplay\\tests\\12_home_to_contact_nav.test.js",
+          "file": "\\tests\\12_home_to_contact_nav.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Screenplay: Home -> Contact\"",
+              "fullTitle": "Screenplay: Home -> Contact \"before all\" hook in \"Screenplay: Home -> Contact\"",
+              "timedOut": false,
+              "duration": 641,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver(true);\nuser = new Actor('Visitor').whoCan(BrowseTheWeb.using(driver));",
+              "err": {},
+              "uuid": "8ed7e8d8-7aac-4c8d-8116-b953ce796bec",
+              "parentUUID": "d0e4a0ae-5701-484e-a44f-a01cdae43cdd",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Screenplay: Home -> Contact\"",
+              "fullTitle": "Screenplay: Home -> Contact \"after all\" hook in \"Screenplay: Home -> Contact\"",
+              "timedOut": false,
+              "duration": 50,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "6455ce69-b2f5-488c-af71-1014964832fd",
+              "parentUUID": "d0e4a0ae-5701-484e-a44f-a01cdae43cdd",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "navega a Contact",
+              "fullTitle": "Screenplay: Home -> Contact navega a Contact",
+              "timedOut": false,
+              "duration": 3932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await user.attemptsTo(Open.url(`${BASE}/`));\ntry {\n  await user.attemptsTo(Click.on(ContactLink));\n} catch (e) {\n  // fallback: ir a vehicles y luego navegar manualmente\n  await user.attemptsTo(Click.on(VehiclesButton));\n  const { driver } = user.abilityTo(BrowseTheWeb);\n  await driver.get(`${BASE}/contact`);\n}\nconst url = await user.asks(CurrentUrl);\nexpect(url).to.include('/contact');",
+              "err": {
+                "message": "TypeError: question.answeredBy is not a function",
+                "estack": "TypeError: question.answeredBy is not a function\n    at Actor.asks (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/src/screenplay/Actor.js:23:21)\n    at Context.<anonymous> (file:///C:/Users/Usuario/Downloads/Alquiler_Autos1/screenplay/tests/12_home_to_contact_nav.test.js:40:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "405b5465-6df1-433c-b011-efba1dbad6ec",
+              "parentUUID": "d0e4a0ae-5701-484e-a44f-a01cdae43cdd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "405b5465-6df1-433c-b011-efba1dbad6ec"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 90000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "screenplay-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "reportFilename": "screenplay-report"
+      },
+      "version": "6.3.0"
+    }
+  }
+}
