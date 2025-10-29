@@ -96,16 +96,22 @@ const dummyData = [
   ];
   
   // Function to insert dummy data into the database
- export  async function insertDummyData() {
+ export async function insertDummyData(req, res, next) {
     try {
-        // Insert the dummy data into the collection
-        await MasterData.insertMany(dummyData);
-        console.log('Dummy data inserted successfully.');
+        const ops = dummyData.map((doc) => ({
+          updateOne: {
+            filter: { id: doc.id },
+            update: { $setOnInsert: doc },
+            upsert: true,
+          },
+        }));
+
+        const result = await MasterData.bulkWrite(ops, { ordered: false });
+        const upserted = result.upsertedCount || 0;
+        const matched = result.matchedCount || 0;
+        return res.status(200).json({ inserted: upserted, matched });
     } catch (error) {
-        console.error('Error inserting dummy data:', error);
-    }
-    finally{
-        mongoose.disconnect();
+        return res.status(500).json({ message: 'Error inserting dummy data', error: error.message });
     }
   }
 

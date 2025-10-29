@@ -1,0 +1,14 @@
+{
+  "name": "alquiler-autos-cucumber",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js --config cucumber.mjs"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.7.0",
+    "@cucumber/html-formatter": "^20.6.1",
+    "selenium-webdriver": "^4.25.0",
+    "chromedriver": "^141.0.6"
+  }
+}

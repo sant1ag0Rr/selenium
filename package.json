@@ -17,7 +17,7 @@
     "sonar:ci": "sonar-scanner -D\"sonar.projectKey=ZlmDnl7_Alquiler_Autos1\" -D\"sonar.organization=zlmdnl7\" -D\"sonar.host.url=https://sonarcloud.io\" -D\"sonar.qualitygate.wait=true\"",
     "quality:check": "npm run test:ci && npm run sonar:ci",
     "ci:full": "npm ci && npm run test:ci && npm run sonar:ci",
-    "e2e": "mocha ./e2e --timeout 120000 --reporter mochawesome",
+    "e2e": "mocha \"e2e/tests/**/*.test.js\" --timeout 120000 --reporter mochawesome",
     "e2e:seed": "node ./e2e/seed.js"
   },
   "keywords": [],
@@ -50,6 +50,7 @@
     "chai": "^6.2.0",
     "chromedriver": "^141.0.6",
     "cross-env": "^10.1.0",
+    "cypress": "^15.5.0",
     "jest": "^29.7.0",
     "mocha": "^11.7.4",
     "mochawesome": "^7.1.4",

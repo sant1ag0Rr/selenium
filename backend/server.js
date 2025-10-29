@@ -32,10 +32,19 @@ const port = process.env.PORT || 5000;
 
 // Conectar a MongoDB usando top-level await
 try {
-  await mongoose.connect(process.env.mongo_uri);
+  const mongoUri = process.env.MONGO_URI || process.env.mongo_uri;
+  if (!mongoUri) {
+    console.error('Missing MONGO_URI in environment variables');
+    process.exit(1);
+  }
+  await mongoose.connect(mongoUri);
   console.log("connected");
 } catch (error) {
   console.error(error);
+}
+
+if (!process.env.JWT_SECRET) {
+  console.warn('Warning: JWT_SECRET is not set. Auth token signing will fail.');
 }
 
 // Configurar Cloudinary solo para rutas que lo necesiten

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * TESTS AUTOMATIZADOS PARA SISTEMA DE ALQUILER DE AUTOS
  * 
  * Patrón AAA (Arrange, Act, Assert)
